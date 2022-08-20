@@ -1,57 +1,72 @@
-#main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  body {
+    background-color: rgb(240, 68, 140);
   }
   
   #cocktail-container {
-    display: flex;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  background: #fff;
   }
  
-.cocktail {
-    flex: 33.33%;
-    padding: 5px;
-  }
-
-  ul {
-    list-style: none;
-  }
-
   img {
     width: 100%;
-    height: auto;
+    height: 55%;
   }
 
   #margarita, #pina-colada {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    border-bottom: 1px solid black; 
+    border-left: 2px double black;
+    border-right: 2px double black;
+    border-top: 2px double black;
+    border-bottom: 2px double black; 
   }
 
   #daiquiri {
     border-left: none;
     border-right: none;
-    border-top: 2px solid black;
-    border-bottom: 1px solid black;
+    border-top: 2px double black;
+    border-bottom: 2px double black;
+  }
+
+  #mojito, #cosmopolitan {
+    border-left: 2px double black;
+    border-right: 2px double black;
+    border-top: none;
+    border-bottom: 1px double black;
+  }
+
+  #cuba-libra {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px double black;
   }
 
   li, p {
     margin-left: 10px;
+    margin-right: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  li {
+    margin-top: 8px;
+  }
+
+  h1 {
+    font-size: 2.5em;
   }
 
   h1, h2 {
     text-align: center;
-    font-family: Verdana
+    font-family: Segoe Print;
   }
 
   :root {
-    --red: rgb(243, 55, 137);
+    --red: rgb(240, 41, 161);
     --white: #fff;
     --black: #000;
 }
 .btn {
-    width: 200px; height: 88px;
+    width: 110px; height: 50px;
     outline: 0;
     border: 2px solid #ccc;
     color: #000;
@@ -60,39 +75,39 @@
     position: relative;
     display:flex;
     justify-content: space-between;
-    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 1.5px 15px rgba(0, 0, 0, 0.05);
     transition: 1.5s cubic-bezier(.21,.04,.26,.99);
 }
 .btn:hover {
-    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1.5px 15px rgba(240, 41, 161);
     border-color: var(--red);
 }
 .btn-like {
-    padding: 1.5rem 1.5rem 1.5rem 6rem;
-    font-size: 2rem;
-    border-radius: 10px;
+    padding: 1rem 1rem 1rem 4rem;
+    font-size: .9rem;
+    border-radius: 8px;
     background: #fff;
     transition: 1.5s cubic-bezier(.21,.04,.26,.99);
 }
 .btn-like.liked {
-    background: var(--red);
+    background: var(--white);
     border-color: var(--red);
 }
 /*-- Button Icon -- */
 .btn-icon {
     display: inline-block;
-    width: 32px;
-    height: 36px;
+    width: 10px;
+    height: 20px;
     position: absolute;
-    left: 1.5rem;
+    left: 1rem;
     transition: 1s cubic-bezier(.21,.04,.26,.99);
     transform: rotate(0deg)
 }
 .btn:hover .btn-icon {
-    color: var(--red);
+    color: var(--black);
 }
 .btn.liked:hover .btn-icon {
-    color: var(--black);
+    color: var(--red);
 }
 .liked .btn--icon-default {
     transform: rotate(-90deg)
@@ -103,13 +118,13 @@
 .liked .btn--icon-default,
 .btn--icon-liked {
     opacity: 0;
-    color: #fff;
+    color: rgb(240, 41, 161);
     position: absolute;
 }
 .btn--icon-default,
 .liked .btn--icon-liked {
     opacity: 1;
-    left: 1.5rem;
+    left: 1rem;
 }
 /*-- Button Content -- */
 .btn-content {
@@ -119,10 +134,10 @@
     right: 0; */
 }
 .liked .btn-content {
-    color: var(--white);
+    color: var(--red);
 }
 .btn:hover.liked .btn-content {
-    color: var(--black);
+    color: var(--red);
 }
 .btn:not(.liked) .btn-content--liked {
     transform: translate(110px)
