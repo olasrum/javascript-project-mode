@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>My SPA</title>
+    <title>Cocktail Recipes</title>
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-        <h1>Classic Cocktail Receipes</h1>
 
+    <header>
+        <div id="bubbles"></div>
+        <h1 >Classic Cocktail Recipes</h1>
+    </header>
+        
         <div id="cocktail-container">
 
           <div id="margarita" class="cocktail">
@@ -108,7 +112,55 @@
               </span>
             </button>
           </div>
-
+          <div id="long-island-tea" class="cocktail">
+            <button id="like-longislandtea" class="btn btn-like">
+              <span class="btn-icon btn--icon-default">
+                  <span class="fa fa-heart"></span>
+              </span>
+              <span class="btn-icon btn--icon-liked">
+                  <span class="fa fa-heart"></span>
+              </span>
+              <span class="btn-content  btn-content--liked">
+                  Liked
+              </span>
+              <span class="btn-content btn-content--default">
+                  Like
+              </span>
+            </button>
+          </div>
+          <div id="tom-collins" class="cocktail">
+            <button id="like-tomcollins" class="btn btn-like">
+              <span class="btn-icon btn--icon-default">
+                  <span class="fa fa-heart"></span>
+              </span>
+              <span class="btn-icon btn--icon-liked">
+                  <span class="fa fa-heart"></span>
+              </span>
+              <span class="btn-content  btn-content--liked">
+                  Liked
+              </span>
+              <span class="btn-content btn-content--default">
+                  Like
+              </span>
+            </button>
+          </div>
+          <div id="whiskey-sour" class="cocktail">
+            <button id="like-whiskeysour" class="btn btn-like">
+              <span class="btn-icon btn--icon-default">
+                  <span class="fa fa-heart"></span>
+              </span>
+              <span class="btn-icon btn--icon-liked">
+                  <span class="fa fa-heart"></span>
+              </span>
+              <span class="btn-content  btn-content--liked">
+                  Liked
+              </span>
+              <span class="btn-content btn-content--default">
+                  Like
+              </span>
+            </button>
+          </div>
+        </div>
       <script src="./index.js"></script>
 </body>
 </html>

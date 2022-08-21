@@ -302,6 +302,152 @@ function displayCosmopolitan(cocktail) {
 
 getCosmopolitan();
 
+// Long Island Tea
+
+function getLongIslandTea() {
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11002')
+    .then(
+        function(response) {
+            if (response.status !==200) {
+                console.log('Looks like there was a problem. Status Code: ' + response.status);
+                return;
+            }
+            response.json().then(function(data) {
+                //console.log(data)
+                displayLongIslandTea(data);
+            });
+        }
+    )
+    .catch(function(err) {
+        console.log('Fetch Error :-S', err);
+    });
+}
+    
+function displayLongIslandTea(cocktail) {
+    const longIslandTea = document.getElementById('long-island-tea');
+
+    const name = document.createElement('h2');
+    name.innerHTML = cocktail.drinks[0].strDrink;
+
+    longIslandTea.appendChild(name);
+
+    const img = document.createElement('img');
+    img.src = cocktail.drinks[0].strDrinkThumb;
+
+    longIslandTea.appendChild(img) 
+
+    for (let i=1; i < 7; i++) {
+        const ingredient = document.createElement('li');
+        ingredient.innerHTML = cocktail.drinks[0][`strMeasure${i}`] + ': ' + cocktail.drinks[0][`strIngredient${i}`];
+
+        longIslandTea.appendChild(ingredient);
+    }
+
+    let instructions = document.createElement('p');
+    instructions.innerHTML = cocktail.drinks[0].strInstructions;
+
+    longIslandTea.appendChild(instructions);
+}
+
+getLongIslandTea();
+
+// Tom Collins
+
+function getTomCollins() {
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=12402')
+    .then(
+        function(response) {
+            if (response.status !==200) {
+                console.log('Looks like there was a problem. Status Code: ' + response.status);
+                return;
+            }
+            response.json().then(function(data) {
+                //console.log(data)
+                displayTomCollins(data);
+            });
+        }
+    )
+    .catch(function(err) {
+        console.log('Fetch Error :-S', err);
+    });
+}
+    
+function displayTomCollins(cocktail) {
+    const tomCollins = document.getElementById('tom-collins');
+
+    const name = document.createElement('h2');
+    name.innerHTML = cocktail.drinks[0].strDrink;
+
+    tomCollins.appendChild(name);
+
+    const img = document.createElement('img');
+    img.src = cocktail.drinks[0].strDrinkThumb;
+
+    tomCollins.appendChild(img) 
+
+    for (let i=1; i < 7; i++) {
+        const ingredient = document.createElement('li');
+        ingredient.innerHTML = cocktail.drinks[0][`strMeasure${i}`] + ': ' + cocktail.drinks[0][`strIngredient${i}`];
+
+        tomCollins.appendChild(ingredient);
+    }
+
+    let instructions = document.createElement('p');
+    instructions.innerHTML = cocktail.drinks[0].strInstructions;
+
+    tomCollins.appendChild(instructions);
+}
+
+getTomCollins();
+
+// Whiskey Sour
+
+function getWhiskeySour() {
+    fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11004')
+    .then(
+        function(response) {
+            if (response.status !==200) {
+                console.log('Looks like there was a problem. Status Code: ' + response.status);
+                return;
+            }
+            response.json().then(function(data) {
+                //console.log(data)
+                displayWhiskeySour(data);
+            });
+        }
+    )
+    .catch(function(err) {
+        console.log('Fetch Error :-S', err);
+    });
+}
+    
+function displayWhiskeySour(cocktail) {
+    const whiskeySour = document.getElementById('whiskey-sour');
+
+    const name = document.createElement('h2');
+    name.innerHTML = cocktail.drinks[0].strDrink;
+
+    whiskeySour.appendChild(name);
+
+    const img = document.createElement('img');
+    img.src = cocktail.drinks[0].strDrinkThumb;
+
+    whiskeySour.appendChild(img) 
+
+    for (let i=1; i < 6; i++) {
+        const ingredient = document.createElement('li');
+        ingredient.innerHTML = cocktail.drinks[0][`strMeasure${i}`] + ': ' + cocktail.drinks[0][`strIngredient${i}`];
+
+        whiskeySour.appendChild(ingredient);
+    }
+
+    let instructions = document.createElement('p');
+    instructions.innerHTML = cocktail.drinks[0].strInstructions;
+
+    whiskeySour.appendChild(instructions);
+}
+
+getWhiskeySour();
 
 
 //like buttons
@@ -340,7 +486,23 @@ const button6 = document.getElementById('like-cosmopolitan')
 button6.addEventListener('click', () => {
     button6.classList.toggle('liked')
 })
-   
 
+const button7 = document.getElementById('like-longislandtea')
+
+button7.addEventListener('click', () => {
+    button7.classList.toggle('liked')
+})
+
+const button8 = document.getElementById('like-tomcollins')
+
+button8.addEventListener('click', () => {
+    button8.classList.toggle('liked')
+})
+   
+const button9 = document.getElementById('like-whiskeysour')
+
+button9.addEventListener('click', () => {
+    button9.classList.toggle('liked')
+})
 
 //https://www.youtube.com/watch?v=TzM7Fh_y0l0
