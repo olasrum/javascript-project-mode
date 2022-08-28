@@ -2,9 +2,8 @@
     background-color: rgb(251, 61, 140);
   }
 
-  #cocktail-container {
-  display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
+  #cocktail-container, #cocktail-container1, #cocktail-container2  {
+  display: flex;
   background: #fff;
   }
  
@@ -18,6 +17,7 @@
     border-right: 2px double black;
     border-top: 2px double black;
     border-bottom: 2px double black; 
+    flex: 33.33%;
   }
 
   #daiquiri {
@@ -25,6 +25,7 @@
     border-right: none;
     border-top: 2px double black;
     border-bottom: 2px double black;
+    flex: 33.33%;
   }
 
   #mojito, #cosmopolitan {
@@ -32,6 +33,7 @@
     border-right: 2px double black;
     border-top: none;
     border-bottom: 2px double black;
+    flex: 33.33%;
   }
 
   #cuba-libra {
@@ -39,6 +41,7 @@
     border-right: none;
     border-top: none;
     border-bottom: 2px double black;
+    flex: 33.33%;
   }
 
   #long-island-tea, #whiskey-sour {
@@ -46,6 +49,7 @@
     border-right: 2px double black;
     border-top: none;
     border-bottom: 2px double black;
+    flex: 33.33%;
   }
 
   #tom-collins {
@@ -53,6 +57,7 @@
     border-right: none;
     border-top: none;
     border-bottom: 2px double black;
+    flex: 33.33%
   }
 
   li, p {
@@ -81,7 +86,7 @@
   }
 
   :root {
-    --red: rgb(240, 41, 161);
+    --pink: rgb(240, 41, 161);
     --white: #fff;
     --black: #000;
 }
@@ -89,7 +94,7 @@
     width: 110px; height: 50px;
     outline: 0;
     border: 2px solid #ccc;
-    color: #000;
+    color: var(--black);
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -100,18 +105,18 @@
 }
 .btn:hover {
     box-shadow: 0px 1.5px 15px rgba(240, 41, 161);
-    border-color: var(--red);
+    border-color: var(--pink);
 }
 .btn-like {
     padding: 1rem 1rem 1rem 4rem;
     font-size: .9rem;
     border-radius: 8px;
-    background: #fff;
+    background: var(--white);
     transition: 1.5s cubic-bezier(.21,.04,.26,.99);
 }
 .btn-like.liked {
     background: var(--white);
-    border-color: var(--red);
+    border-color: var(--pink);
 }
 /*-- Button Icon -- */
 .btn-icon {
@@ -127,7 +132,7 @@
     color: var(--black);
 }
 .btn.liked:hover .btn-icon {
-    color: var(--red);
+    color: var(--pink);
 }
 .liked .btn--icon-default {
     transform: rotate(-90deg)
@@ -138,7 +143,7 @@
 .liked .btn--icon-default,
 .btn--icon-liked {
     opacity: 0;
-    color: rgb(240, 41, 161);
+    color: var(--pink);
     position: absolute;
 }
 .btn--icon-default,
@@ -154,10 +159,10 @@
     right: 0; */
 }
 .liked .btn-content {
-    color: var(--red);
+    color: var(--pink);
 }
 .btn:hover.liked .btn-content {
-    color: var(--red);
+    color: var(--pink);
 }
 .btn:not(.liked) .btn-content--liked {
     transform: translate(110px)
