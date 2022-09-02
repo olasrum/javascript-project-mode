@@ -184,11 +184,6 @@
   flex: 100%;
   margin: 10px;
   }
-
-  #margarita, #pina-colada, #daiquiri, #mojito, #cosmopolitan, #cuba-libra #long-island-tea, #whiskey-sour ,#tom-collins {
-    border: 1px solid #fafafa;
-    flex: 33.33%;
-    }
   
   img {
   height: 100%;
