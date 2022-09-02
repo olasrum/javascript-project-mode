@@ -171,7 +171,7 @@
 
 @media all and (max-width:650px){
 
-  #cocktail-container, #cocktail-container1, #cocktail-container2 {
+  #cocktail-container1, #cocktail-container2, #cocktail-container3 {
   flex-direction: column;
   }
   
