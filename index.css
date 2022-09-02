@@ -175,20 +175,11 @@
   flex-direction: column;
   }
   
-  #margarita, #pina-colada, #mojito, #cuba-libra, #cosmopolitan, #long-island-tea, #whiskey-sour, #tom-collins {
+  #margarita, #daiquiri, #pina-colada, #mojito, #cuba-libra, #cosmopolitan, #long-island-tea, #whiskey-sour, #tom-collins {
   flex: 100%;
   margin: 10px;
+  border: 1px solid #0f0f0f;
   }
-  
-  #daiquiri {
-  flex: 100%;
-  margin: 10px;
-  }
-
-  #margarita, #pina-colada, #daiquiri, #mojito, #cosmopolitan, #cuba-libra #long-island-tea, #whiskey-sour ,#tom-collins {
-    border: 1px solid #0f0f0f;
-    flex: 33.33%;
-    }
   
   img {
   height: 100%;
