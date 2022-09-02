@@ -2,23 +2,10 @@
 
 function getMargarita() {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=12322')
-    .then(
-        function(response) {
-            if (response.status !==200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                return;
-            }
-            response.json().then(function(data) {
-                //console.log(data)
-                displayMargarita(data);
-            });
-        }
-    )
-    .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-    });
+    .then(resp => resp.json())
+    .then(data => displayMargarita(data))
 }
-    
+   
 function displayMargarita(cocktail) {
     const margarita = document.getElementById('margarita');
 
@@ -55,21 +42,8 @@ getMargarita();
 
 function getDaiquiri() {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11064')
-    .then(
-        function(response) {
-            if (response.status !==200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                return;
-            }
-            response.json().then(function(data) {
-                //console.log(data)
-                displayDaiquiri(data);
-            });
-        }
-    )
-    .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-    });
+    .then(resp => resp.json())
+    .then(data => displayDaiquiri(data))
 }
     
 function displayDaiquiri(cocktail) {
@@ -103,21 +77,8 @@ getDaiquiri();
 
 function getPinaColada() {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17207')
-    .then(
-        function(response) {
-            if (response.status !==200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                return;
-            }
-            response.json().then(function(data) {
-                //console.log(data)
-                displayPinaColada(data);
-            });
-        }
-    )
-    .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-    });
+    .then(resp => resp.json())
+    .then(data => displayPinaColada(data))
 }
     
 function displayPinaColada(cocktail) {
@@ -151,21 +112,8 @@ getPinaColada();
 
 function getMojito() {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11000')
-    .then(
-        function(response) {
-            if (response.status !==200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                return;
-            }
-            response.json().then(function(data) {
-                //console.log(data)
-                displayMojito(data);
-            });
-        }
-    )
-    .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-    });
+    .then(resp => resp.json())
+    .then(data => displayMojito(data))
 }
     
 function displayMojito(cocktail) {
@@ -204,21 +152,8 @@ getMojito();
 
 function getCubaLibra() {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=13751')
-    .then(
-        function(response) {
-            if (response.status !==200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                return;
-            }
-            response.json().then(function(data) {
-                //console.log(data)
-                displayCubaLibra(data);
-            });
-        }
-    )
-    .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-    });
+    .then(resp => resp.json())
+    .then(data => displayCubaLibra(data))
 }
     
 function displayCubaLibra(cocktail) {
@@ -257,21 +192,8 @@ getCubaLibra();
 
 function getCosmopolitan() {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17196')
-    .then(
-        function(response) {
-            if (response.status !==200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                return;
-            }
-            response.json().then(function(data) {
-                //console.log(data)
-                displayCosmopolitan(data);
-            });
-        }
-    )
-    .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-    });
+    .then(resp => resp.json())
+    .then(data => displayCosmopolitan(data))
 }
     
 function displayCosmopolitan(cocktail) {
@@ -306,21 +228,8 @@ getCosmopolitan();
 
 function getLongIslandTea() {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11002')
-    .then(
-        function(response) {
-            if (response.status !==200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                return;
-            }
-            response.json().then(function(data) {
-                //console.log(data)
-                displayLongIslandTea(data);
-            });
-        }
-    )
-    .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-    });
+    .then(resp => resp.json())
+    .then(data => displayLongIslandTea(data))
 }
     
 function displayLongIslandTea(cocktail) {
@@ -355,21 +264,8 @@ getLongIslandTea();
 
 function getTomCollins() {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=12402')
-    .then(
-        function(response) {
-            if (response.status !==200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                return;
-            }
-            response.json().then(function(data) {
-                //console.log(data)
-                displayTomCollins(data);
-            });
-        }
-    )
-    .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-    });
+    .then(resp => resp.json())
+    .then(data => displayTomCollins(data))
 }
     
 function displayTomCollins(cocktail) {
@@ -404,21 +300,8 @@ getTomCollins();
 
 function getWhiskeySour() {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11004')
-    .then(
-        function(response) {
-            if (response.status !==200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-                return;
-            }
-            response.json().then(function(data) {
-                //console.log(data)
-                displayWhiskeySour(data);
-            });
-        }
-    )
-    .catch(function(err) {
-        console.log('Fetch Error :-S', err);
-    });
+    .then(resp => resp.json())
+    .then(data => displayWhiskeySour(data))
 }
     
 function displayWhiskeySour(cocktail) {
