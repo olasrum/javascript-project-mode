@@ -8,4 +8,4 @@ For the JavaScript phase of the software engineering course I am doing, we were 
 
 App: Simple classic cocktail recipe app with recipes for nine cocktails and the ability to like each individual cocktail
 API used: TheCocktailDB.com 
-Basic code structure: indivdual fetch and display functions for each individual cocktail using the API data for the cocktail name, images, ingredients, measures and instructions and event listeners for each like button.
+Basic code structure: indivdual fetch and display functions for each individual cocktail using the API data for the cocktail name, image, ingredients, measures and instructions and event listeners for each like button.
